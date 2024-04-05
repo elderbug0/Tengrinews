@@ -95,3 +95,6 @@ header {
     width: 16rem;
 
 }
+.news-item:hover {
+    cursor: pointer;
+}

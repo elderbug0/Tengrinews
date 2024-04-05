@@ -1,0 +1,113 @@
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #f1f2f1;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #303133;
+    color: #fff;
+    padding: 1.9rem;
+    top: 0; 
+    width: 100%; 
+    z-index: 999; 
+}
+
+#main-cont {
+    background-color: white;
+    width: 75rem;
+    height: 120rem;
+    margin: 0 auto; 
+    border-radius: 8px;
+}
+#logo {
+    margin-top: 0.8rem;
+    margin-left: 4rem;
+    width: 13rem; /* Adjust the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+#sub{
+    background-color: #32a801;
+    margin-top: 0.9rem;
+    padding: 0.7rem;
+    justify-content: center;
+    cursor: default; /* Set default cursor */
+    text-align: center; /* Center align the text */
+    color: white; /* Set text color to white */
+    font-family: 'Inter', sans-serif; /* Specify Inter font family */
+    font-weight: 600; /* Set font weight to semi-bold (600) */
+}
+#date{
+    color: grey;
+    margin-left: 2rem;
+    margin-top: 1.7rem;
+}
+#h1{
+    font-family: 'Inter',sans-serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    width: 75rem;
+}
+#author{
+    width: 7rem;
+    height: auto;
+}
+#p{
+    font-family: 'Inter', sans-serif;
+    width: 10rem;
+    font-weight: 600;
+    margin-left: 7rem;
+    margin-top: -3rem;
+}
+#human{
+    margin-left: 2rem;
+    width: 55rem;
+    height: auto;
+    margin-top: 2rem;
+}
+#main-text{
+    font-family: 'Inter',sans-serif;
+    width: 55rem;
+    font-size: medium;
+    margin-left: 6rem;
+}
+.info-box {
+    background-color: #eff5f2;
+    border-left: 4px solid #8cde9e;
+    font-family: 'Inter', sans-serif;
+    font-size: medium;
+    padding: 1rem;
+    padding-top: 1rem;
+    margin-left: 0rem;
+    margin-top: 3rem;
+}
+
+.info-box p {
+    margin: 0 0 20px 0;
+    font-weight: 600;
+}
+#row2 {
+    background-color: white;
+    width: 75rem;
+    height: 140rem;
+    margin: 0 auto; 
+    border-radius: 8px;
+}#date2{
+    color: grey;
+    margin-left: 2rem;
+    padding-top: 2rem;
+}
+#tag{
+    float: left; /* Position list items horizontally */
+    margin-right: 2px; /* Space between items */
+    padding: 5px 10px; /* Padding inside the boxes */
+    background-color: #a9dfaa; /* Green background */
+    color: black; /* White text color */
+    text-align: center;
+    border-radius: 5px; /* Rounded corners */
+    font-family: 'Inter', sans-serif; /* Font from your style */
+    font-size: 0.9rem; /* Adjust font size as needed */
+    font-weight: 400; /* Font weight as needed */
+}

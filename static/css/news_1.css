@@ -1,0 +1,46 @@
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #f1f2f1;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #303133;
+    color: #fff;
+    padding: 1.9rem;
+    top: 0; 
+    width: 100%; 
+    z-index: 999; 
+}
+
+#main-cont {
+    background-color: white;
+    width: 75rem;
+    height: 60rem;
+    margin: 0 auto; 
+}
+#row2{
+    background-color: white;
+    width: 75rem;
+    height: 60rem;
+    margin: 0 auto; 
+    margin-top: 2rem;
+}
+#logo {
+    margin-top: 0.8rem;
+    margin-left: 4rem;
+    width: 13rem; /* Adjust the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+#sub{
+    background-color: #32a801;
+    margin-top: 0.9rem;
+    padding: 0.7rem;
+    justify-content: center;
+    cursor: default; /* Set default cursor */
+    text-align: center; /* Center align the text */
+    color: white; /* Set text color to white */
+    font-family: 'Inter', sans-serif; /* Specify Inter font family */
+    font-weight: 600; /* Set font weight to semi-bold (600) */
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tengrinews</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    
+</head>
+<body>
+    <header></header>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <div id="main-cont">
+        <img src="{{url_for('static', filename='logo (2).png')}}"  alt="Logo" id="logo">
+        <div id="sub">Подписывайтесь на канал Tengrinews.kz в WhatsApp </div>
+        <div id="news">
+            <a href="{{url_for('static', filename='news_1.html')}}" id="eyes-link">
+                <img src="{{url_for('static', filename='eyes.png')}}" alt="News" id="eyes">
+                <div id="eyes-text">Демпинг, мафия жалобщиков и прозрачность: что изменит новый закон о госзакупках</div>
+            </a>
+        </div>
+    </div>
+
+
+    <div id="row2"></div>
+</body>
+</html>

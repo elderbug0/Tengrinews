@@ -17,7 +17,7 @@ header {
 #main-cont {
     background-color: white;
     width: 75rem;
-    height: 140rem;
+    height: 100%;
     margin: 0 auto; 
 }
 #logo {
@@ -86,4 +86,16 @@ header {
 .info-box p {
     margin: 0 0 20px 0;
     font-weight: 600;
+}
+#tag{
+    float: left; /* Position list items horizontally */
+    margin-right: 2px; /* Space between items */
+    padding: 5px 10px; /* Padding inside the boxes */
+    background-color: #e6ffe7; /* Green background */
+    color: black; /* White text color */
+    text-align: center;
+    border-radius: 5px; /* Rounded corners */
+    font-family: 'Inter', sans-serif; /* Font from your style */
+    font-size: 0.9rem; /* Adjust font size as needed */
+    font-weight: 400; /* Font weight as needed */
 }

@@ -17,7 +17,7 @@ header {
 #main-cont {
     background-color: white;
     width: 75rem;
-    height: 60rem;
+    height: 80rem;
     margin: 0 auto; 
 }
 #row2{
@@ -49,6 +49,7 @@ header {
     margin-left: 2rem;
     width: 53rem;
     height: auto;
+    border-radius: 5px;
 }
 #eyes-link {
     display: block;
@@ -63,4 +64,34 @@ header {
     font-size: 2rem; /* Adjust based on preference */
     font-family: 'Inter', sans-serif; /* Specify Inter font family */
     font-weight: 700;
+}
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates three columns */
+    grid-template-rows: repeat(2, 1fr); /* Creates two rows */
+    gap: 1rem; /* Adjust the gap between the items */
+    padding: 2rem; /* Padding around the grid */
+    height: 37rem;
+    width: 54.5rem;
+     /* Add margin at the bottom */
+
+}
+
+.news-item {
+    overflow: hidden; /* Ensures that the content does not overflow */
+
+  }
+  
+  .news-item img {
+    height: 10rem;
+    width: 16rem; /* Maximum width of the image is 100% of its container */
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  #news-text {
+    font-family: 'Inter',sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    width: 16rem;
+
 }

@@ -35,7 +35,7 @@ header {
 }
 #sub{
     background-color: #32a801;
-    margin-top: 0.9rem;
+    margin-top: 1.2rem;
     padding: 0.7rem;
     justify-content: center;
     cursor: default; /* Set default cursor */
@@ -97,4 +97,22 @@ header {
 }
 .news-item:hover {
     cursor: pointer;
+}
+
+#searchForm{
+    margin-left: 45rem;
+    margin-top: -2rem;
+
+}
+#searchQuery {
+    padding: 0.5rem; /* Add some padding to the input */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Add some border radius for rounded corners */
+    width: 25rem;
+}
+#searchSuggestions {
+    background: white; 
+    border: 1px solid #ddd;
+    width: 26rem;
+
 }

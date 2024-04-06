@@ -2,6 +2,60 @@ document.addEventListener('DOMContentLoaded', function() {
     var subDiv = document.getElementById('sub');
     var logo = document.getElementById('logo');
     var newsItems = document.querySelectorAll('.news-item'); // Select all news items
+    const searchQuery = document.getElementById('searchQuery');
+    const suggestionsBox = document.getElementById('searchSuggestions');
+
+    searchQuery.addEventListener('input', function(e) {
+        const query = e.target.value;
+        if (query.length < 3) {
+            suggestionsBox.innerHTML = '';
+            return;
+        }
+
+        fetch('/search', {
+            method: 'POST',
+            body: JSON.stringify({query: query}),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            suggestionsBox.innerHTML = '';
+            data.forEach(item => {
+                const suggestionItem = document.createElement('div');
+                suggestionItem.style.display = 'flex';
+                suggestionItem.style.alignItems = 'center';
+                suggestionItem.style.cursor = 'pointer';
+
+                const img = document.createElement('img');
+                img.src = item.image;
+                img.alt = 'News Image';
+                img.style.width = '10rem';  // Set the image size
+                img.style.height = '6rem';
+                img.style.marginRight = '10px';
+
+                const title = document.createElement('div');
+                title.textContent = item.title;
+
+                suggestionItem.appendChild(img);
+                suggestionItem.appendChild(title);
+
+                suggestionItem.addEventListener('click', () => {
+                    window.location.href = item.url;
+                });
+
+                suggestionsBox.appendChild(suggestionItem);
+            });
+        })
+        .catch(error => console.error('Error:', error));
+    });
+
+    document.body.addEventListener('click', () => {
+        suggestionsBox.innerHTML = ''; // Clear suggestions when clicking outside
+    }, true);
+
+
 
     function setCursor(element) {
         element.addEventListener('mouseenter', function() {

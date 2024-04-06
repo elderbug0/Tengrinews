@@ -6,9 +6,13 @@
 </head>
 <body>
     <header></header>
-    <script src="{{ url_for('static', filename='js/page2.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <div id="main-cont">
         <img src="{{url_for('static', filename='photos/logo (2).png')}}"  alt="Logo" id="logo">
+        <form id="searchForm">
+            <input type="text" id="searchQuery" placeholder="Search news..." autocomplete="off">
+            <div id="searchSuggestions" style="position: absolute; background: white; border: 1px solid #ddd;"></div>
+        </form>
         <div id="sub">Подписывайтесь на канал Tengrinews.kz в WhatsApp </div>
         <p id="date">05 апреля 2024 06:09</p>
         <h1 id="h1">Как заработать столько денег, чтобы можно было не работать в Казахстане</h1>
@@ -16,7 +20,7 @@
         <img src="{{url_for('static', filename='photos/author1.png')}}" id="author">
         <p id="p"><span style="color: green;">Амина Апарина</span><br><span style="color: grey;">Корреспондент</span></p>
         <img src="{{url_for('static', filename='photos/photo_467839.jpeg.jpg')}}" id="human">
-        <div style="width: 55rem; margin-left: 2rem; margin-top: 2rem; font-size: x-large; font-family: 'Inter', sans-serif; font-weight: 500;">
+        <div style="width: 55rem; margin-left: 2rem; margin-top: 2rem; font-size: large; font-family: 'Inter', sans-serif; font-weight: 600;">
             Как к 40 годам обеспечить себе безбедное существование, бросить работу и заняться тем, о чем всегда мечталось - путешествовать, преподавать, писать картины или выращивать розы? Эксперты дали читателям Tengrinews.kz несколько советов.
         </div>
         <hr style="width: 70rem; margin-top: 2rem;">

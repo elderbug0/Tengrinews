@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tengrinews</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/eye.css')}}">
+</head>
+<body>
+    <header></header>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <div id="main-cont">
+        <img src="{{url_for('static', filename='photos/logo (2).png')}}"  alt="Logo" id="logo">
+        <form id="searchForm">
+            <input type="text" id="searchQuery" placeholder="Search news..." autocomplete="off">
+            <div id="searchSuggestions" style="position: absolute; background: white; border: 1px solid #ddd;"></div>
+        </form>
+        <div id="sub">Подписывайтесь на канал Tengrinews.kz в WhatsApp </div>
+        <p id="date">07 апреля 2024 13:19</p>
+        <h1 id="h1">Нацбанк предупредил казахстанцев</h1>
+        <hr style="width: 70rem;">
+        <img src="{{url_for('static', filename='photos/photo_467710.jpg.png')}}" id="human">
+        <div style="width: 55rem; margin-left: 2rem; margin-top: 2rem; font-size: large; font-family: 'Inter', sans-serif; font-weight: 600;">
+            Национальный банк предупредил казахстанцев о новых мошеннических схемах с использованием "страховых случаев", передает Tengrinews.kz.
+        </div>
+        <hr style="width: 70rem; margin-top: 2rem;">
+        <div id="main-text">
+            <div style="margin-top: 2rem;">Нацбанк предупреждает об участившихся случаях мошенничества с предоставлением злоумышленниками поддельных "документов частных судебных исполнителей", сформированных в рамках судебных производств и решений.</div>
+
+            <div class="info-box" style="margin-top: 2rem;">
+                <p>"Злоумышленники с целью хищения денежных средств, представляясь частными судебными исполнителями, направляют поддельные документы о наличии у граждан "открытых и застрахованных счетов физических лиц" в Национальном банке. При этом гражданам под предлогом осуществления денежных выплат и компенсаций, как потерпевшей стороне, предлагается внести страховой взнос, который впоследствии якобы будет покрыт из "средств Национального банка", - сообщили в Нацбанке.</p>
+            </div>
+
+            <div style="margin-top: 2rem;">Для повышения доверия граждан на поддельных документах также размещаются подписи, имена и печати от "уполномоченных лиц" государственных органов или частных судебных исполнителей. Такие "подтверждающие документы" предоставляются для того, чтобы убедить граждан осуществлять денежные переводы третьим лицам.</div>
+
+            <div style="margin-top: 2rem;">В Нацбанке напомнили, что ведомство не обслуживает счета физических лиц, не занимается страхованием денежных средств граждан, а также не проводит денежные расчеты с населением. В случае если вы или ваши знакомые столкнулись с мошенническими схемами, настоятельно рекомендуем обратиться с соответствующим заявлением в правоохранительные органы.</div>
+
+            <div style="margin-top: 2rem;">Для получения консультаций можно обратиться в контакт-центр Национального банка по короткому номеру 1477.</div>
+
+            <div style="margin-top: 2rem;">Ранее Нацбанку вернули 960 гектаров земли в Алматы.</div>
+
+            <p id="tag">НацБанк</p>
+            <p id="tag">Алматы</p>
+            <p id="tag">Казахстан</p>
+        
+            <!-- Comment Section -->
+            <div id="comment-section" style="margin-top: 3rem;">
+                <form id="comment-form">
+                    <label for="comment-input">Оставьте ваш комментарий:</label><br>
+                    <input type="text" id="comment-input" name="comment-input" style="width: 100%; margin-top: 0.5rem;"><br>
+                    <button type="submit" style="margin-top: 0.5rem;">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

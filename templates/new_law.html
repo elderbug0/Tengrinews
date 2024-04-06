@@ -6,17 +6,21 @@
 </head>
 <body>
     <header></header>
-    <script src="{{ url_for('static', filename='js/page2.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <div id="main-cont">
         <img src="{{url_for('static', filename='photos/logo (2).png')}}"  alt="Logo" id="logo">
+        <form id="searchForm">
+            <input type="text" id="searchQuery" placeholder="Search news..." autocomplete="off">
+            <div id="searchSuggestions" style="position: absolute; background: white; border: 1px solid #ddd;"></div>
+        </form>
         <div id="sub">Подписывайтесь на канал Tengrinews.kz в WhatsApp </div>
-        <p id="date">05 апреля 2024 06:09</p>
+        <p id="date">04 апреля 2024 01:09</p>
         <h1 id="h1">Многолетний бардак в системе госзакупок: решит ли проблему новый закон</h1>
         <hr style="width: 70rem;">
         <img src="{{url_for('static', filename='photos/author1.png')}}" id="author">
         <p id="p"><span style="color: green;">Айнаш Ондирис</span><br><span style="color: grey;">Журналист</span></p>
         <img src="{{url_for('static', filename='photos/human.jpg')}}" id="human">
-        <div style="width: 55rem; margin-left: 2rem; margin-top: 2rem; font-size: x-large; font-family: 'Inter', sans-serif; font-weight: 500;">
+        <div style="width: 55rem; margin-left: 2rem; margin-top: 2rem; font-size: large; font-family: 'Inter', sans-serif; font-weight: 600;">
             В системе госзакупок грядут изменения. Ранее ее раскритиковал Президент Касым-Жомарт Токаев. Как будут выявлять недобросовестных поставщиков? И как собираются решать проблему с демпингом? Об этом корреспонденту Tengrinews.kz рассказал руководитель рабочей группы по разработке законопроекта о госзакупках, депутат Мажилиса Руслан Кожасбаев.
         </div>
         <hr style="width: 70rem; margin-top: 2rem;">
@@ -34,6 +38,10 @@
                 <p>"При подаче заявки на веб-портал для участия в госзакупках системой автоматически проводится полный анализ компании по истории деятельности, по исполнению иных договоров, по уплате налоговой базы, по уплате фонда труда. Еще до предложения цены эта компания автоматом будет проверяться. Если компания проходит квалификационный отбор, значит, она устойчивая, качественная, которая может допускаться до участия в конкурсе", - пояснил Кожасбаев.</p>
             </div>
             <div style="margin-top: 3rem;">Новым законом хотят решить и проблему демпинга, когда в конкурсе выигрывала компания, предложившая самую низкую цену, но не самое лучшее качество.</div>
+
+            <p id="tag">Закон</p>
+            <p id="tag">Мафия</p>
+            <p id="tag">Демпинг</p>
         
             <!-- Comment Section -->
             <div id="comment-section" style="margin-top: 3rem;">

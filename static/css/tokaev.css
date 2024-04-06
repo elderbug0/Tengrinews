@@ -70,7 +70,7 @@ header {
 #main-text{
     font-family: 'Inter',sans-serif;
     width: 55rem;
-    font-size: medium;
+    font-size: 1.1rem;
     margin-left: 6rem;
 }
 .info-box {
@@ -79,7 +79,7 @@ header {
     font-family: 'Inter', sans-serif;
     font-size: medium;
     padding: 1rem;
-    padding-top: 1rem;
+    padding-top: 2.5rem;
     margin-left: 0rem;
     margin-top: 3rem;
 }
@@ -110,4 +110,21 @@ header {
     font-family: 'Inter', sans-serif; /* Font from your style */
     font-size: 0.9rem; /* Adjust font size as needed */
     font-weight: 400; /* Font weight as needed */
+}
+#searchForm{
+    margin-left: 45rem;
+    margin-top: -2rem;
+
+}
+#searchQuery {
+    padding: 0.5rem; /* Add some padding to the input */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Add some border radius for rounded corners */
+    width: 25rem;
+}
+#searchSuggestions {
+    background: white; 
+    border: 1px solid #ddd;
+    width: 26rem;
+
 }

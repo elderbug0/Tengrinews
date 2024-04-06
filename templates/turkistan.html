@@ -6,35 +6,42 @@
 </head>
 <body>
     <header></header>
-    <script src="{{ url_for('static', filename='js/page2.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <div id="main-cont">
         <img src="{{url_for('static', filename='photos/logo (2).png')}}"  alt="Logo" id="logo">
+        <form id="searchForm">
+            <input type="text" id="searchQuery" placeholder="Search news..." autocomplete="off">
+            <div id="searchSuggestions" style="position: absolute; background: white; border: 1px solid #ddd;"></div>
+        </form>
         <div id="sub">Подписывайтесь на канал Tengrinews.kz в WhatsApp </div>
         <p id="date">05 апреля 2024 06:09</p>
         <h1 id="h1">Многолетний бардак в системе госзакупок: решит ли проблему новый закон</h1>
         <hr style="width: 70rem;">
-        <img src="{{url_for('static', filename='photos/author1.png')}}" id="author">
-        <p id="p"><span style="color: green;">Айнаш Ондирис</span><br><span style="color: grey;">Журналист</span></p>
-        <img src="{{url_for('static', filename='photos/human.jpg')}}" id="human">
-        <div style="width: 55rem; margin-left: 2rem; margin-top: 2rem; font-size: x-large; font-family: 'Inter', sans-serif; font-weight: 500;">
-            В системе госзакупок грядут изменения. Ранее ее раскритиковал Президент Касым-Жомарт Токаев. Как будут выявлять недобросовестных поставщиков? И как собираются решать проблему с демпингом? Об этом корреспонденту Tengrinews.kz рассказал руководитель рабочей группы по разработке законопроекта о госзакупках, депутат Мажилиса Руслан Кожасбаев.
+        <img src="{{url_for('static', filename='photos/Дизайн_без_названия__1_-removebg-preview.png')}}" id="author">
+        <p id="p"><span style="color: green;">Турар Казангапов</span><br><span style="color: grey;">Фотокорреспондент</span></p>
+        <img src="{{url_for('static', filename='photos/photo_3494.jpeg.png')}}" id="human">
+        <div style="width: 55rem; margin-left: 2rem; margin-top: 2rem; font-size: large; font-family: 'Inter', sans-serif; font-weight: 600;">
+            "Работы как не было, так и нет. Зато в Туркестане стройка не останавливается ни на день. Так и живем в тени областного центра", - рассказывает жительница Кентау. По ее словам, жизнь в когда-то цветущем моногороде становится все сложнее.
         </div>
         <hr style="width: 70rem; margin-top: 2rem;">
         <div id="main-text">
-            <div>По данным Кожасбаева, проект закона предусматривает основные положения, принципы, права и обязанности субъектов госзакупок. Кроме того, в новом законе предусматривается:</div>
-            <ul>
-                <li style="margin-top: 0.7rem;">Новый механизм обжалования госзакупок.</li>
-                <li style="margin-top: 0.7rem;">Внедрение института общественного мониторинга.</li>
-                <li style="margin-top: 0.7rem;">Сокращение срока проведения закупок.</li>
-                <li style="margin-top: 0.7rem;">Упрощение закупочного процесса.</li>
-                <li style="margin-top: 0.7rem;">Упрощение закупок из одного источника.</li>
-            </ul>
-            <div>ПДля того чтобы отсечь недобросовестных поставщиков, законопроектом предусмотрено внедрение неценовых критериев. Руководитель рабочей группы объяснил, что это предполагает.</div>
-            <div class="info-box">
-                <p>"При подаче заявки на веб-портал для участия в госзакупках системой автоматически проводится полный анализ компании по истории деятельности, по исполнению иных договоров, по уплате налоговой базы, по уплате фонда труда. Еще до предложения цены эта компания автоматом будет проверяться. Если компания проходит квалификационный отбор, значит, она устойчивая, качественная, которая может допускаться до участия в конкурсе", - пояснил Кожасбаев.</p>
-            </div>
-            <div style="margin-top: 3rem;">Новым законом хотят решить и проблему демпинга, когда в конкурсе выигрывала компания, предложившая самую низкую цену, но не самое лучшее качество.</div>
+            <div style="margin-top: 2ren;">По данным Кожасбаева, проект закона предусматривает основные положения, принципы, права и обязанности субъектов госзакупок. Кроме того, в новом законе предусматривается:</div>
+
+            <img src="{{url_for('static', filename='photos/51327f3e88b33a67626a70833cb9cad5.jpg')}}" style="margin-top: 2rem;">
+
+            <div style="margin-top: 2rem;">6 лет назад наши корреспонденты запечатлели Кентау еще до того момента, когда в Казахстане появилась Туркестанская область.</div>
+            
+            <img src="{{url_for('static', filename='photos/93104a380afcb111b48bdcc87d0f5ec4.jpg')}}" style="margin-top: 2rem;">
+
+            <div style="margin-top: 2rem;">Тогда казалось, что жизнь в моногороде вот-вот должна измениться в лучшую сторону. Ведь теперь областной центр - Туркестан - всего в 25 минутах езды. Но важнее то, что в регион в прямом смысле потекли деньги. </div>
         
+            <img src="{{url_for('static', filename='photos/781afb3d607946259b647dbf70c7537b.jpg')}}" style="margin-top: 2rem;">
+
+            <div style="margin-top: 2rem;">На проект по комплексному развитию Туркестанской области, рассчитанного на 2021-2025 годы, планировалось выделить более 880 миллиардов тенге из республиканского и местного бюджетов. А с инвестициями называлась сумма в 3,6 триллиона тенге. В 2024 году для Туркестанской области было предусмотрено более 1 триллиона тенге субвенций. Это в несколько раз больше, чем получат другие регионы. </div>
+            <p id="tag">Туркестан</p>
+            <p id="tag">бардак</p>
+            <p id="tag">госзакупки</p>
+            <p id="tag">новый закон</p>
             <!-- Comment Section -->
             <div id="comment-section" style="margin-top: 3rem;">
                 <form id="comment-form">

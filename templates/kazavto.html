@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tengrinews</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/eye.css')}}">
+</head>
+<body>
+    <header></header>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <div id="main-cont">
+        <img src="{{url_for('static', filename='photos/logo (2).png')}}"  alt="Logo" id="logo">
+        <form id="searchForm">
+            <input type="text" id="searchQuery" placeholder="Search news..." autocomplete="off">
+            <div id="searchSuggestions" style="position: absolute; background: white; border: 1px solid #ddd;"></div>
+        </form>
+        <div id="sub">Подписывайтесь на канал Tengrinews.kz в WhatsApp </div>
+        <p id="date">07 апреля 2024 13:19</p>
+        <h1 id="h1">Многолетний бардак в системе госзакупок: решит ли проблему новый закон</h1>
+        <hr style="width: 70rem;">
+        <img src="{{url_for('static', filename='photos/photo_467662.jpeg (1).png')}}" id="human">
+        <div style="width: 55rem; margin-left: 2rem; margin-top: 2rem; font-size: large; font-family: 'Inter', sans-serif; font-weight: 600;">
+            В Астане задержан экс-председатель правления АО "НК "КазАвтоЖол" Аскар Муратулы. Его подозревают в хищении бюджетных средств в особо крупном размере, передает Tengrinews.kz со ссылкой на пресс-службу Агентства по финансовому мониторингу.
+        </div>
+        <hr style="width: 70rem; margin-top: 2rem;">
+        <div id="main-text">
+            <div class="info-box" style="margin-top: 2rem;">
+                <p>"По подозрению в совершении хищения бюджетных средств в особо крупном размере путем незаконного проведения государственных закупок из одного источника департаментом АФМ по городу Астане при координации Главной транспортной прокуратуры задержан экс-председатель правления АО "НК "КазАвтоЖол" А. Муратулы", - говорится в сообщении ведомства.</p>
+            </div>
+
+            <div style="margin-top: 2rem;">Суд санкционировал меру пресечения подозреваемому "содержание под стражей" сроком на 2 месяца.</div>
+
+            <div style="margin-top: 2rem;">Аскар Муратулы родился в 1976 году. Учился в Восточно-Казахстанском техническом университете по специальности "экономика и менеджмент на транспорте", а также в Казахском автомобильно-дорожном университете имени Гончарова.</div>
+
+            <div style="margin-top: 2rem;">Трудовую деятельность начал в 1998 году. В 1998-2002 годах работал ведущим специалистом в Министерстве транспорта и коммуникаций, последовательно был главным специалистом, начальником отдела, заместителем начальника управления Комитета автомобильных дорог.</div>
+
+            <div style="margin-top: 2rem;">Работал директором Костанайского, Карагандинского, Павлодарского областных филиалов РГП "Казахавтодор". В 2007-2012 годах - заместитель начальника Управления пассажирского транспорта и автомобильных дорог города Астаны, эксперт Министерства транспорта и коммуникаций, заместитель начальника Инспекции финансового контроля по Жамбылской области.</div>
+
+            <p id="tag">Авто</p>
+            <p id="tag">экс-председательь</p>
+            <p id="tag">КазАвтоЖол</p>
+        
+            <!-- Comment Section -->
+            <div id="comment-section" style="margin-top: 3rem;">
+                <form id="comment-form">
+                    <label for="comment-input">Оставьте ваш комментарий:</label><br>
+                    <input type="text" id="comment-input" name="comment-input" style="width: 100%; margin-top: 0.5rem;"><br>
+                    <button type="submit" style="margin-top: 0.5rem;">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

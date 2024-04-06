@@ -8,7 +8,9 @@ news_data = {
         'title': 'Прозрачность в системе', 
         'url': '/systema_gos',
         'image': '/static/photos/eyes.png',
-        'keywords': ['демпинг мафия жалобщиков и прозрачность что изменит новый закон о госзакупках']
+        'keywords': ['демпинг мафия жалобщиков и прозрачность что изменит новый закон о госзакупках'],
+        'date': '2024-04-03'
+        
     },
     'tokaev': {
         'title': 'Визит Токаева в Узбекистане', 
@@ -30,9 +32,21 @@ news_data = {
     },
     'turkistan': {
         'title': 'В тени Туркестана', 
-        'url': '/aktobe',
+        'url': '/turkistan',
         'image': '/static/photos/photo_3494.jpeg',
-        'keywords': ['в тени туркестана. почему мужчины покидают райский город на юге казахстана']
+        'keywords': ['в тени туркестана. почему мужчины покидают райский город на юге казахстана','многолетний бардак в системе госзакупок решит ли проблему новый закон']
+    },
+    'kazavto': {
+        'title': 'Задержали председателя', 
+        'url': '/kazavto',
+        'image': '/static/photos/photo_467662.jpeg.png',
+        'keywords': ['задержан экс-председатель правления "казавтожола"']
+    },
+    'nazbank': {
+        'title': 'Нацбанк предупредил казахстанцев', 
+        'url': '/nazbank',
+        'image': '/static/photos/photo_467710.jpg.png',
+        'keywords': ['нацбанк предупредил казахстанцев"']
     },
 }
 
@@ -58,10 +72,12 @@ def aktobe():
 @app.route('/turkistan')
 def bishimbaev():
     return render_template('turkistan.html')
-
-@app.route('/moshennik')
-def moshennik():
-    return render_template('moshennik.html')
+@app.route('/kazavto')
+def kazavto():
+    return render_template('kazavto.html')
+@app.route('/nazbank')
+def nazbank():
+    return render_template('nazbank.html')
 
 @app.route('/search', methods=['POST'])
 def search():

@@ -4,6 +4,49 @@ document.addEventListener('DOMContentLoaded', function() {
     var newsItems = document.querySelectorAll('.news-item'); // Select all news items
     const searchQuery = document.getElementById('searchQuery');
     const suggestionsBox = document.getElementById('searchSuggestions');
+    const filterChoice = document.getElementById('filterChoice');
+
+    // Function to fetch and update news list based on the selected filter
+    function fetchAndUpdateNews() {
+        const choice = filterChoice.value;
+        
+        fetch('/filter_news', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({filter_choice: choice}),
+        })
+        .then(response => response.json())
+        .then(data => {
+            updateNewsList(data);
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+    // Update news list when the filter choice changes
+    filterChoice.addEventListener('change', fetchAndUpdateNews);
+
+    function updateNewsList(newsData) {
+        const newsContainer = document.getElementById('newsContainer');
+        newsContainer.innerHTML = ''; // Clear current news
+
+        newsData.forEach(newsItem => {
+            const newsElement = document.createElement('div');
+            newsElement.style.cursor = 'pointer';
+            newsElement.innerHTML = `
+                <h2>${newsItem.title}</h2>
+                <img src="${newsItem.image}" alt="News Image" style="width: 100px; height: 60px;">
+                <p>Date: ${newsItem.date}</p>
+            `;
+
+            newsContainer.appendChild(newsElement);
+        });
+    }
+
+    // Automatically fetch and display the latest news on page load
+    fetchAndUpdateNews();
+
 
     searchQuery.addEventListener('input', function(e) {
         const query = e.target.value;

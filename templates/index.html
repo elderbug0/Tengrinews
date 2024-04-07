@@ -7,6 +7,7 @@
 </head>
 <body>
     <header></header>
+
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <div id="main-cont">
 
@@ -18,13 +19,24 @@
         <div id="searchSuggestions" style="position: absolute; background: white; border: 1px solid #ddd;"></div>
     </form>
         <div id="sub">Подписывайтесь на канал Tengrinews.kz в WhatsApp </div>
+
+        <div id="filter">
+        <select id="filterChoice">
+            <option value="Последние">Последние</option>
+            <option value="Ранние">Ранние</option>
+        </select>    
+        <div id="scrolable">
+            <div id="newsContainer"></div>
+        </div>
+        </div>
+
         <div id="news">
             <a href="{{url_for('corrution')}}" id="eyes-link">
                 <img src="{{url_for('static', filename='photos/eyes.png')}}" alt="News" id="eyes">
                 <div id="eyes-text">Демпинг, мафия жалобщиков и прозрачность: что изменит новый закон о госзакупках</div>
                 <div style="color: white; font-size: small; margin-left: 4rem; margin-top: 2rem;
                 font-family: 'Inter', sans-serif; 
-                font-weight: 200;">Сегодня в 13:05</div>
+                font-weight: 200;">04 апреля 2024</div>
             </a>
         </div>
     
@@ -41,6 +53,8 @@
     </div>
 
 
-    <div id="row2"></div>
+    <div id="row2"> 
+
+    </div>
 </body>
 </html>

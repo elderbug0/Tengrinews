@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tengrinews</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/eye.css')}}">
+</head>
+<body>
+    <header></header>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <div id="main-cont">
+        <img src="{{url_for('static', filename='photos/logo (2).png')}}"  alt="Logo" id="logo">
+        <form id="searchForm">
+            <input type="text" id="searchQuery" placeholder="Search news..." autocomplete="off">
+            <div id="searchSuggestions" style="position: absolute; background: white; border: 1px solid #ddd;"></div>
+        </form>
+        <div id="sub">Подписывайтесь на канал Tengrinews.kz в WhatsApp </div>
+        <p id="date">03 апреля 2024 06:09</p>
+        <h1 id="h1">Сделано бабушкой. Кто и почему продает закрутки на улицах Астаны?</h1>
+        <hr style="width: 70rem;">
+        <img src="{{url_for('static', filename='photos/photo_3503.jpeg.png')}}" id="human">
+        <div style="width: 55rem; margin-left: 2rem; margin-top: 2rem; font-size: large; font-family: 'Inter', sans-serif; font-weight: 600;">
+            Те, кто живет или хоть раз бывал на правом берегу столицы, наверняка обращали внимание на небольшие открытые ларьки в разных точках. На прилавках здесь выставлены закрутки, а продают их чаще всего бабушки или дедушки. Корреспонденты Tengrinews.kz познакомились с ними поближе, чтобы узнать, чем они занимались раньше и что привело их к уличному бизнесу. 
+        </div>
+        <hr style="width: 70rem; margin-top: 2rem;">
+        <div id="main-text">
+
+
+            <img src="{{url_for('static', filename='photos/d9a4b1541673c5961a6ce2510d4290d1.jpg')}}" style="margin-top: 2rem;">
+
+            <div style="margin-top: 2rem;">Проспект Жеңіс, недалеко от пересечения с улицей Московской. Небольшие торговые ряды. За одним из прилавков знакомимся с супружеской парой - Николаем и Ларисой.
+
+            </div>
+            
+            <img src="{{url_for('static', filename='photos/625cf86a615834f45859d4600821949a.jpg')}}" style="margin-top: 2rem;">
+
+            <div style="margin-top: 2rem;">"Мы готовим и для себя, и на продажу. Продаем не только здесь, но и через объявления в Интернете. И даже через Kaspi-магазин. Все как положено. Используем все возможности. И доставкой отправляем", - рассказывает Николай. </div>
+        
+            <img src="{{url_for('static', filename='photos/4c767016cfcff2c9ee269a79a12dfcf0.jpg')}}" style="margin-top: 2rem;">
+
+            <div style="margin-top: 2rem;">"Грибы сейчас у нас остались только подтопольники, до этого еще грузди были. Грибные места нужно знать, мы сбором грибов много лет занимаемся. Приезжаешь в нужное место и на коленях ходишь, собираешь. Наколенники надеваешь. Потом это все отмываешь, чтоб песка не было. К примеру, соберешь ведро, и с него выходит литровая банка. Это тяжелый труд", - добавляет он. </div>
+
+            <img src="{{url_for('static', filename='photos/e9e256fc849f8cd0f72f77dfa904ece2.jpg')}}" style="margin-top: 2rem;">
+
+            <div style="margin-top: 2rem;">"Многие приходят сейчас и покупают варенья. Говорят, чтоб поставить на стол на ауызашар. Варенье из малины многие покупают, весна ведь, а оно хорошо помогает при простуде", - объясняет Лариса.</div>
+
+            <p id="tag">Банки</p>
+            <p id="tag">Астана</p>
+            <p id="tag">Бабушка</p>
+            <!-- Comment Section -->
+            <div id="comment-section" style="margin-top: 3rem;">
+                <form id="comment-form">
+                    <label for="comment-input">Оставьте ваш комментарий:</label><br>
+                    <input type="text" id="comment-input" name="comment-input" style="width: 100%; margin-top: 0.5rem;"><br>
+                    <button type="submit" style="margin-top: 0.5rem;">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

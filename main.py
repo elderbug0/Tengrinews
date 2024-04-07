@@ -8,34 +8,6 @@ app = Flask(__name__)
 
 
 
-@app.route('/search', methods=['POST'])
-def search():
-    data = request.json
-    query = data['query'].lower()
-    matches = [value for value in news_data.values() if any(query in keyword for keyword in value['keywords'])]
-    return jsonify(matches)
-
-@app.route('/filter')
-def filter():
-    return render_template('filter.html')
-
-@app.route('/filter_news', methods=['POST'])
-def filter_news():
-    choice = request.json.get('filter_choice')
-    all_news = list(news_data.values())
-
-    for news_item in all_news:
-        news_item['date'] = datetime.strptime(news_item.get('date', '2024-01-01'), '%Y-%m-%d')
-
-    if choice == 'Последние':
-        filtered_news = sorted(all_news, key=lambda x: x['date'], reverse=True)
-    else:  # Earliest
-        filtered_news = sorted(all_news, key=lambda x: x['date'])
-
-    for news_item in filtered_news:
-        news_item['date'] = news_item['date'].strftime('%Y-%m-%d')
-
-    return jsonify(filtered_news)
 
 
 
@@ -93,6 +65,20 @@ news_data = {
         'keywords': ['задержан экс-председатель правления "казавтожола"'],
         'date': '2024-04-09'
     },
+    'babushka': {
+        'title': 'Сделано бабушкой. Кто и почему продает закрутки на улицах Астаны?', 
+        'url': '/babushka',
+        'image': '/static/photos/photo_3503.jpeg.png',
+        'keywords': ['сделано бабушкой кто и почему продает закрутки на улицах астаны'],
+        'date': '2024-04-03'
+    },
+    'voda': {
+        'title': '"Вода зашла во все дома": где нашли пристанище казахстанцы, чьи дома затопили паводки', 
+        'url': '/voda',
+        'image': '/static/photos/photo_3498.jpeg.png',
+        'keywords': ['вода зашла во все дома: где нашли пристанище казахстанцы, чьи дома затопили паводки'],
+        'date': '2024-04-02'
+    },
 
 }
 
@@ -124,8 +110,42 @@ def kazavto():
 @app.route('/nazbank')
 def nazbank():
     return render_template('nazbank.html')
+@app.route('/babushka')
+def babushka():
+    return render_template('babushka.html')
+@app.route('/voda')
+def voda():
+    return render_template('voda.html')
 
 
+@app.route('/search', methods=['POST'])
+def search():
+    data = request.json
+    query = data['query'].lower()
+    matches = [value for value in news_data.values() if any(query in keyword for keyword in value['keywords'])]
+    return jsonify(matches)
+
+@app.route('/filter')
+def filter():
+    return render_template('filter.html')
+
+@app.route('/filter_news', methods=['POST'])
+def filter_news():
+    choice = request.json.get('filter_choice')
+    all_news = list(news_data.values())
+
+    for news_item in all_news:
+        news_item['date'] = datetime.strptime(news_item.get('date', '2024-01-01'), '%Y-%m-%d')
+
+    if choice == 'Последние':
+        filtered_news = sorted(all_news, key=lambda x: x['date'], reverse=True)
+    else:  # Earliest
+        filtered_news = sorted(all_news, key=lambda x: x['date'])
+
+    for news_item in filtered_news:
+        news_item['date'] = news_item['date'].strftime('%Y-%m-%d')
+
+    return jsonify(filtered_news)
 
 if __name__ == '__main__':
     app.run(debug=True)

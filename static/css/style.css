@@ -73,10 +73,7 @@ header {
 
 }
 
-.news-item {
-    overflow: hidden; /* Ensures that the content does not overflow */
 
-  }
   
   .news-item img {
     height: auto;
@@ -164,9 +161,59 @@ header {
 #row2{
     background-color: white;
     width: 75rem;
-    height: 25rem;
+    height: 36rem;
     margin: 0 auto; 
     margin-top: 2rem;
     border-radius: 8px;
     margin-bottom: 2rem;
+}
+
+#text{
+    font-size: 2rem;
+}
+
+#news-item-row{
+    width: 20rem;
+    height: 20rem;
+    font-size: 1.6rem;
+    margin-left: 2.7rem;
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+}
+.news-page { display: none; } /* Initially hide all pages */
+#news-item-row { margin-bottom: 20px;  }
+
+#photo{
+    height: auto;
+    width: 20rem; /* Maximum width of the image is 100% of its container */
+    margin-top: -2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+
+}
+#paginationControls {
+    display: flex;
+    justify-content: center;
+    margin-top: -1.6rem;
+
+}
+
+#paginationControls button {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    background-color: #32a801;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#paginationControls button:hover {
+    background-color: #218c00;
+}
+
+#paginationControls button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }

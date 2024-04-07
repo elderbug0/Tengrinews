@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tengrinews</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/eye.css')}}">
+</head>
+<body>
+    <header></header>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <div id="main-cont">
+        <img src="{{url_for('static', filename='photos/logo (2).png')}}"  alt="Logo" id="logo">
+        <form id="searchForm">
+            <input type="text" id="searchQuery" placeholder="Search news..." autocomplete="off">
+            <div id="searchSuggestions" style="position: absolute; background: white; border: 1px solid #ddd;"></div>
+        </form>
+        <div id="sub">Подписывайтесь на канал Tengrinews.kz в WhatsApp </div>
+        <p id="date">02 апреля 2024 06:09</p>
+        <h1 id="h1">"Вода зашла во все дома": где нашли пристанище казахстанцы, чьи дома затопили паводки</h1>
+        <hr style="width: 70rem;">
+        <img src="{{url_for('static', filename='photos/photo_3498.jpeg.png')}}" id="human">
+        <div style="width: 55rem; margin-left: 2rem; margin-top: 2rem; font-size: large; font-family: 'Inter', sans-serif; font-weight: 600;">
+            Как проходит эвакуация людей и доставка гуманитарной помощи пострадавшим в результате паводков, которые настигли этой весной несколько регионов Казахстана. На вертолете корреспондент Tengrinews.kz отправилась в один из районов Актюбинской области, куда пришла большая вода. Подробности - в фоторепортаже. 
+        </div>
+        <hr style="width: 70rem; margin-top: 2rem;">
+        <div id="main-text">
+
+
+            <img src="{{url_for('static', filename='photos/c78b8c10e4d690b018a3941918bef2ca.jpg')}}" style="margin-top: 2rem;">
+
+            <div style="margin-top: 2rem;">Это аэродром единственного в Казахстане военного института Сил воздушной обороны (ВИСВО) имени Талгата Бегельдинова в Актобе. Попасть на стратегический объект можно только со спецпропуском.
+
+            </div>
+            
+            <img src="{{url_for('static', filename='photos/847f0c2d3f2294bfc9b059b066ba803b.jpg')}}" style="margin-top: 2rem;">
+
+            <div style="margin-top: 2rem;">Журналистов сюда приглашают крайне редко. Сегодня исключительный случай, когда можно и посмотреть, и задать немного вопросов военным пилотам. </div>
+        
+            <img src="{{url_for('static', filename='photos/0f79e20f9bbcad5b7dd062838c7b5c89.jpg')}}" style="margin-top: 2rem;">
+
+            <div style="margin-top: 2rem;">Летчики непубличные люди, им гораздо легче управлять многотонным вертолетом, чем рассказывать про свои будни. Пилоты военного института Сил воздушной обороны в эти дни, как и спасатели, задействованы в масштабных операциях по противодействию паводкам.
+
+            </div>
+
+            <div class="info-box">
+                <p>"С 28 марта наши экипажи армейской авиации подняты в воздух. Поступала информация о подтоплении из Уилского, Кобдинского, Иргизского районов. Было выполнено более 150 полетов, эвакуировано более 1000 человек, доставлена гуманитарная помощь во все вышеуказанные пункты – более 19 тонн. Помимо этого, на место подтопления доставлялись экипажи ДЧС, МЧС – более ста человек. Вместе с ними оборудование – лодки, генераторы для обеспечения электричеством населения. Также в оперативный штаб поступала информация о людях, которые остались отрезанными от внешнего мира. По координатам наши экипажи находили их", - рассказывает заместитель начальника учебно-авиационного центра ВИСВО Талгат Кульжанов.</p>
+            </div>
+            <img src="{{url_for('static', filename='photos/880f0b7002f7d3f65d1ae09f8ad40ade.jpg')}}" style="margin-top: 2rem;">
+
+            <div style="margin-top: 2rem;">Автосообщение с Уилом прервано из-за размытых дорог. Поэтому люди вынуждены просить летчиков доставить их в областной центр.
+
+            </div>
+
+            <div class="info-box">
+                <p>"У меня внуки приехали на каникулы из города. Но тут начались паводки, а теперь не могут вернуться домой. Дороги нет. Надеемся, что вертолет дадут. Им же в школу надо. Поэтому вот так сидим с утра до вечера здесь. А вдруг кто нас заберет на вертолете", - рассказывает жительница Уилского района.</p>
+            </div>
+
+            <div style="margin-top: 2rem;">На пороге десятки пар обуви. Несмотря на такое количество людей, администрация спортивной школы пытается поддерживать здесь порядок. К нашему приезду в коридоре сотрудники ДЮСШ мыли полы. </div>
+
+            <p id="tag">Паводки</p>
+            <p id="tag">Спасатели</p>
+            <p id="tag">Село</p>
+            <!-- Comment Section -->
+            <div id="comment-section" style="margin-top: 3rem;">
+                <form id="comment-form">
+                    <label for="comment-input">Оставьте ваш комментарий:</label><br>
+                    <input type="text" id="comment-input" name="comment-input" style="width: 100%; margin-top: 0.5rem;"><br>
+                    <button type="submit" style="margin-top: 0.5rem;">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

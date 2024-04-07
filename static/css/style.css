@@ -20,14 +20,9 @@ header {
     width: 75rem;
     height: 80rem;
     margin: 0 auto; 
+    border-radius: 8px;
 }
-#row2{
-    background-color: white;
-    width: 75rem;
-    height: 60rem;
-    margin: 0 auto; 
-    margin-top: 2rem;
-}
+
 #logo {
     margin-top: 0.8rem;
     margin-left: 4rem;
@@ -164,4 +159,14 @@ header {
 #newsContainer{
     font-family: 'Inter', sans-serif;
     font-size: 0.8em;
+}
+
+#row2{
+    background-color: white;
+    width: 75rem;
+    height: 25rem;
+    margin: 0 auto; 
+    margin-top: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
 }

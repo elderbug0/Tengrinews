@@ -5,13 +5,49 @@ from datetime import datetime
 
 app = Flask(__name__)
 
+
+
+
+@app.route('/search', methods=['POST'])
+def search():
+    data = request.json
+    query = data['query'].lower()
+    matches = [value for value in news_data.values() if any(query in keyword for keyword in value['keywords'])]
+    return jsonify(matches)
+
+@app.route('/filter')
+def filter():
+    return render_template('filter.html')
+
+@app.route('/filter_news', methods=['POST'])
+def filter_news():
+    choice = request.json.get('filter_choice')
+    all_news = list(news_data.values())
+
+    for news_item in all_news:
+        news_item['date'] = datetime.strptime(news_item.get('date', '2024-01-01'), '%Y-%m-%d')
+
+    if choice == 'Последние':
+        filtered_news = sorted(all_news, key=lambda x: x['date'], reverse=True)
+    else:  # Earliest
+        filtered_news = sorted(all_news, key=lambda x: x['date'])
+
+    for news_item in filtered_news:
+        news_item['date'] = news_item['date'].strftime('%Y-%m-%d')
+
+    return jsonify(filtered_news)
+
+
+
+
+
 news_data = {
     'corruption': {
         'title': 'Демпинг мафия жалобщиков', 
         'url': '/systema_gos',
         'image': '/static/photos/eyes.png',
         'keywords': ['демпинг мафия жалобщиков и прозрачность что изменит новый закон о госзакупках'],
-        'date': '2024-04-04'
+        'date': '2024-04-10'
         
     },
     'earn': {
@@ -48,7 +84,7 @@ news_data = {
         'url': '/nazbank',
         'image': '/static/photos/photo_467710.jpg.png',
         'keywords': ['нацбанк предупредил казахстанцев"'],
-        'date': '2024-4-10'
+        'date': '2024-4-04'
     },
     'kazavto': {
         'title': 'Задержан экс-председатель правления "КазАвтоЖола', 
@@ -88,35 +124,6 @@ def kazavto():
 @app.route('/nazbank')
 def nazbank():
     return render_template('nazbank.html')
-
-@app.route('/search', methods=['POST'])
-def search():
-    data = request.json
-    query = data['query'].lower()
-    matches = [value for value in news_data.values() if any(query in keyword for keyword in value['keywords'])]
-    return jsonify(matches)
-
-@app.route('/filter')
-def filter():
-    return render_template('filter.html')
-
-@app.route('/filter_news', methods=['POST'])
-def filter_news():
-    choice = request.json.get('filter_choice')
-    all_news = list(news_data.values())
-
-    for news_item in all_news:
-        news_item['date'] = datetime.strptime(news_item.get('date', '2024-01-01'), '%Y-%m-%d')
-
-    if choice == 'Последние':
-        filtered_news = sorted(all_news, key=lambda x: x['date'], reverse=True)
-    else:  # Earliest
-        filtered_news = sorted(all_news, key=lambda x: x['date'])
-
-    for news_item in filtered_news:
-        news_item['date'] = news_item['date'].strftime('%Y-%m-%d')
-
-    return jsonify(filtered_news)
 
 
 

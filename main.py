@@ -15,7 +15,7 @@ app = Flask(__name__)
 
 news_data = {
     'corruption': {
-        'title': 'Демпинг мафия жалобщиков', 
+        'title': 'Демпинг мафия жалобщиков и прозрачность что изменит новый закон о госзакупках', 
         'url': '/systema_gos',
         'image': '/static/photos/eyes.png',
         'keywords': ['демпинг мафия жалобщиков и прозрачность что изменит новый закон о госзакупках'],
@@ -23,7 +23,7 @@ news_data = {
         
     },
     'earn': {
-        'title': 'Как заработать много денег', 
+        'title': 'Как заработать столько денег, чтобы можно было не работать в Казахстане', 
         'url': '/earn',
         'image': '/static/photos/photo_467839.jpeg',
         'keywords': ['как заработать столько денег, чтобы можно было не работать в казахстане'],
@@ -45,7 +45,7 @@ news_data = {
         'date': '2024-04-07'
     },
     'turkistan': {
-        'title': 'В тени Туркестана', 
+        'title': 'В тени Туркестана. почему мужчины покидают райский город на юге Казахстана', 
         'url': '/turkistan',
         'image': '/static/photos/photo_3494.jpeg',
         'keywords': ['в тени туркестана. почему мужчины покидают райский город на юге казахстана'],
@@ -78,6 +78,20 @@ news_data = {
         'image': '/static/photos/photo_3498.jpeg.png',
         'keywords': ['вода зашла во все дома: где нашли пристанище казахстанцы, чьи дома затопили паводки'],
         'date': '2024-04-02'
+    },
+    'earthquake': {
+        'title': '"Землетрясение ощутили жители Алматы', 
+        'url': '/earthquake',
+        'image': '/static/photos/photo_468033.jpeg.png',
+        'keywords': ['землетрясение ощутили жители алматы'],
+        'date': '2024-03-30'
+    },
+    'akim': {
+        'title': 'Аким Костаная обратился к жителям города с просьбой', 
+        'url': '/akim',
+        'image': '/static/photos/photo_468043.jpeg.png',
+        'keywords': ['аким костаная обратился к жителям города с просьбой'],
+        'date': '2024-04-01'
     },
 
 }
@@ -116,6 +130,12 @@ def babushka():
 @app.route('/voda')
 def voda():
     return render_template('voda.html')
+@app.route('/earthquake')
+def earthquake():
+    return render_template('earthquake.html')
+@app.route('/akim')
+def akim():
+    return render_template('akim.html')
 
 
 @app.route('/search', methods=['POST'])

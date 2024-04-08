@@ -107,6 +107,8 @@ header {
     background: white; 
     border: 1px solid #ddd;
     width: 26rem;
+    z-index: 1;
+
 
 }
 #filter{

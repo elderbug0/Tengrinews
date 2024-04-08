@@ -93,7 +93,13 @@ news_data = {
         'keywords': ['аким костаная обратился к жителям города с просьбой'],
         'date': '2024-04-01'
     },
-
+    'bishimbaev': {
+        'title': '"Вы что, идеальный человек?" - вопросы присяжных зачитали в суде над Бишимбаевым', 
+        'url': '/bishimbaev',
+        'image': '/static/photos/photo_468156.jpg',
+        'keywords': ['вы что идеальный человек вопросы присяжных зачитали в суде над бишимбаевым'],
+        'date': '2024-03-29'
+    },
 }
 
 
@@ -116,7 +122,7 @@ def earn():
 def aktobe():
     return render_template('aktobe.html')
 @app.route('/turkistan')
-def bishimbaev():
+def turkistan():
     return render_template('turkistan.html')
 @app.route('/kazavto')
 def kazavto():
@@ -136,7 +142,9 @@ def earthquake():
 @app.route('/akim')
 def akim():
     return render_template('akim.html')
-
+@app.route('/bishimbaev')
+def bishimbaev():
+    return render_template('bishimbaev.html')
 
 @app.route('/search', methods=['POST'])
 def search():

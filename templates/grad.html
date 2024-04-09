@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tengrinews</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/eye.css')}}">
+</head>
+<body>
+    <header></header>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <div id="main-cont">
+        <img src="{{url_for('static', filename='photos/logo (2).png')}}"  alt="Logo" id="logo">
+        <form id="searchForm">
+            <input type="text" id="searchQuery" placeholder="Search news..." autocomplete="off">
+            <div id="searchSuggestions" style="position: absolute; background: white; border: 1px solid #ddd;"></div>
+        </form>
+        <div id="sub">Подписывайтесь на канал Tengrinews.kz в WhatsApp </div>
+        <p id="date">27 марта 2024 17:00</p>
+        <h1 id="h1">Алматинцев предупредили о крупном граде</h1>
+        <hr style="width: 70rem;">
+        <img src="{{url_for('static', filename='photos/photo_468175.jpeg.png')}}" id="human">
+        <div style="width: 55rem; margin-left: 2rem; margin-top: 2rem; font-size: large; font-family: 'Inter', sans-serif; font-weight: 600;">
+            Алматинцев предупредили о крупном граде и грозе, передает Tengrinews.kz со ссылкой на пресс-службу ДЧС города.
+        </div>
+        <hr style="width: 70rem; margin-top: 2rem;">
+        <div id="main-text">
+            <div style="margin-top: 2rem;"> Согласно прогнозу синоптиков, 27 марта во второй половине дня в Алматы ожидается сильный дождь, гроза и крупный град.
+
+            </div>
+            <div class="info-box" style="margin-bottom: 2rem;">
+                <p>"9 апреля во второй половине дня ветер северо-западный, при грозе порывы ветра составят 15-20 метров в секунду. ДЧС рекомендует скорректировать маршрут своего движения, снизить скорость автомобиля, включить аварийные огни либо переждать сильный дождь, по возможности остаться в помещении", - говорится в сообщении.</p>
+            </div>
+
+            <div>Владельцам частных домов ДЧС рекомендует принять меры по подготовке ливневой канализации и других дренажных систем к отводу дождевого стока.</div>
+            <ul style="margin-top: 2rem;">
+                <li style="margin-top: 0.7rem;">Обращайте внимание на целостность воздушных линий электропередач;</li>
+                <li style="margin-top: 0.7rem;">Не стойте под слабо укрепленными конструкциями - их разрушение может привести к травмированию людей;</li>
+                <li style="margin-top: 0.7rem;">Постарайтесь укрыться в зданиях, расположенных выше возможного уровня подтопления;</li>
+                <li style="margin-top: 0.7rem;">Пешеходам также необходимо проявлять осторожность, помните, что вас не видно во время дождя.</li>
+            </ul>
+            <p id="tag">Алматы </p>
+            <p id="tag">Гроза</p>
+            <p id="tag">Дождь</p>
+
+        
+            <!-- Comment Section -->
+            <h2>Comments</h2>
+            <div id="comments">
+                {% for comment in comments %}
+                <div class="comment">
+                    <p>{{ comment.content }}</p>
+                    <small>{{ comment.date_posted.strftime('%Y-%m-%d') }}</small>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <!-- Comment form -->
+            <form method="POST">
+                <label for="comment-input">Leave a comment:</label><br>
+                <textarea id="comment-input" name="comment-input"></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+            
+        </div>
+    </div>
+</body>
+</html>

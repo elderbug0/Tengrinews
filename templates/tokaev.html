@@ -37,13 +37,7 @@
             <p id="tag">Президент Казахстана</p>
             <p id="tag">Церемония</p>
             <!-- Comment Section -->
-            <div id="comment-section" style="margin-top: 3rem;">
-                <form id="comment-form">
-                    <label for="comment-input">Оставьте ваш комментарий:</label><br>
-                    <input type="text" id="comment-input" name="comment-input" style="width: 100%; margin-top: 0.5rem;"><br>
-                    <button type="submit" style="margin-top: 0.5rem;">Отправить</button>
-                </form>
-            </div>
+
 
         </div>
     </div>
@@ -67,11 +61,29 @@
             <div style="margin-top: 2rem; margin-bottom: 2rem;">Девушка в национальном узбекском костюме преподнесла букет роз Главе государства, как только он спустился по трапу самолета.</div>
             <img src="{{url_for('static', filename='photos/e6c747a8c68083a87e8f090cca3dda2d.jpeg')}}">
             <div style="margin-top: 2rem;">В программу рабочего визита Президента Казахстана в Узбекистан вошла неформальная встреча лидеров двух стран.</div>
-            <p id="tag">Паводки</p>
-            <p id="tag">Бектенов Олжас</p>
-            <p id="tag">Премьер-министр</p>
-            <p id="tag">Актюбинская область</p>
-            <p id="tag">Платина</p>
+            <p id="tag">Танцы</p>
+            <p id="tag">Встреча</p>
+            <p id="tag">Президент Казахстана</p>
+            <p id="tag">Церемония</p>
+
+            <h2>Comments</h2>
+            <div id="comments">
+                {% for comment in comments %}
+                <div class="comment">
+                    <p>{{ comment.content }}</p>
+                    <small>{{ comment.date_posted.strftime('%Y-%m-%d') }}</small>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <!-- Comment form -->
+            <form method="POST">
+                <label for="comment-input">Leave a comment:</label><br>
+                <textarea id="comment-input" name="comment-input"></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+
+            
             
     </div>
 </body>

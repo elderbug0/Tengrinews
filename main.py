@@ -1,15 +1,26 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, redirect
 import json
 from datetime import datetime
+from flask_sqlalchemy import SQLAlchemy
 
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db' # Example for SQLite
+db = SQLAlchemy(app)
 
 
 
 
 
+class Comment(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    content = db.Column(db.Text, nullable=False)
+    date_posted = db.Column(db.DateTime, default=datetime.utcnow)
+    article_url = db.Column(db.String, nullable=False)  # This associates a comment with an article's URL.
 
+
+with app.app_context():
+    db.create_all()
 
 
 
@@ -100,6 +111,13 @@ news_data = {
         'keywords': ['вы что идеальный человек вопросы присяжных зачитали в суде над бишимбаевым'],
         'date': '2024-03-29'
     },
+    'grad': {
+        'title': 'Алматинцев предупредили о крупном граде', 
+        'url': '/grad',
+        'image': '/static/photos/photo_468175.jpeg.png',
+        'keywords': ['алматинцев предупредили о крупном граде'],
+        'date': '2024-03-27'
+    },
 }
 
 
@@ -109,42 +127,153 @@ news_data = {
 @app.route('/')
 def home():
     return render_template('index.html')
-@app.route('/systema_gos')
+
+@app.route('/systema_gos', methods=['GET', 'POST'])
 def corrution():
-    return render_template('new_law.html')
-@app.route('/tokaev')
+    if request.method == 'POST':
+        comment_content = request.form.get('comment-input')
+        new_comment = Comment(content=comment_content, article_url='/systema_gos')  # Note the article_url field.
+        db.session.add(new_comment)
+        db.session.commit()
+        return redirect(request.url)
+    comments = Comment.query.filter_by(article_url='/systema_gos').order_by(Comment.date_posted.desc()).all()  # Filter comments by article.
+
+    return render_template('new_law.html', comments=comments)
+
+@app.route('/tokaev', methods=['GET', 'POST'])
 def tokaev():
-    return render_template('tokaev.html')
-@app.route('/earn')
+    if request.method == 'POST':
+        comment_content = request.form.get('comment-input')
+        new_comment = Comment(content=comment_content, article_url='/tokaev')  # Note the article_url field.
+        db.session.add(new_comment)
+        db.session.commit()
+        return redirect(request.url)
+    comments = Comment.query.filter_by(article_url='/tokaev').order_by(Comment.date_posted.desc()).all()  # Filter comments by article.
+
+    return render_template('tokaev.html', comments=comments)
+
+@app.route('/earn', methods=['GET', 'POST'])
 def earn():
-    return render_template('earn.html')
-@app.route('/aktobe')
+    if request.method == 'POST':
+        comment_content = request.form.get('comment-input')
+        new_comment = Comment(content=comment_content, article_url='/earn')  # Note the article_url field.
+        db.session.add(new_comment)
+        db.session.commit()
+        return redirect(request.url)
+    comments = Comment.query.filter_by(article_url='/earn').order_by(Comment.date_posted.desc()).all()  # Filter comments by article.
+
+    return render_template('earn.html', comments=comments)
+
+@app.route('/aktobe', methods=['GET', 'POST'])
 def aktobe():
-    return render_template('aktobe.html')
-@app.route('/turkistan')
+    if request.method == 'POST':
+        comment_content = request.form.get('comment-input')
+        new_comment = Comment(content=comment_content, article_url='/aktobe')  # Note the article_url field.
+        db.session.add(new_comment)
+        db.session.commit()
+        return redirect(request.url)
+    comments = Comment.query.filter_by(article_url='/aktobe').order_by(Comment.date_posted.desc()).all()  # Filter comments by article.
+    return render_template('aktobe.html', comments=comments)
+
+@app.route('/turkistan', methods=['GET', 'POST'])
 def turkistan():
-    return render_template('turkistan.html')
-@app.route('/kazavto')
+    if request.method == 'POST':
+        comment_content = request.form.get('comment-input')
+        new_comment = Comment(content=comment_content, article_url='/aktobe')  # Note the article_url field.
+        db.session.add(new_comment)
+        db.session.commit()
+        return redirect(request.url)
+    comments = Comment.query.filter_by(article_url='/aktobe').order_by(Comment.date_posted.desc()).all()  # Filter comments by article.
+    return render_template('turkistan.html', comments=comments)
+
+@app.route('/kazavto', methods=['GET', 'POST'])
 def kazavto():
-    return render_template('kazavto.html')
-@app.route('/nazbank')
+    if request.method == 'POST':
+        comment_content = request.form.get('comment-input')
+        new_comment = Comment(content=comment_content, article_url='/kazavto')  # Note the article_url field.
+        db.session.add(new_comment)
+        db.session.commit()
+        return redirect(request.url)
+    comments = Comment.query.filter_by(article_url='/kazavto').order_by(Comment.date_posted.desc()).all()  # Filter comments by article.
+    return render_template('kazavto.html', comments=comments)
+
+@app.route('/nazbank', methods=['GET', 'POST'])
 def nazbank():
-    return render_template('nazbank.html')
-@app.route('/babushka')
+    if request.method == 'POST':
+        comment_content = request.form.get('comment-input')
+        new_comment = Comment(content=comment_content, article_url='/nazbank')  # Note the article_url field.
+        db.session.add(new_comment)
+        db.session.commit()
+        return redirect(request.url)
+    comments = Comment.query.filter_by(article_url='/nazbank').order_by(Comment.date_posted.desc()).all()  # Filter comments by article.
+    return render_template('nazbank.html', comments=comments)
+
+@app.route('/babushka', methods=['GET', 'POST'])
 def babushka():
-    return render_template('babushka.html')
-@app.route('/voda')
+    if request.method == 'POST':
+        comment_content = request.form.get('comment-input')
+        new_comment = Comment(content=comment_content, article_url='/babushka')  # Note the article_url field.
+        db.session.add(new_comment)
+        db.session.commit()
+        return redirect(request.url)
+    comments = Comment.query.filter_by(article_url='/babushka').order_by(Comment.date_posted.desc()).all()
+    return render_template('babushka.html', comments=comments)
+
+@app.route('/voda', methods=['GET', 'POST'])
 def voda():
-    return render_template('voda.html')
-@app.route('/earthquake')
+    if request.method == 'POST':
+        comment_content = request.form.get('comment-input')
+        new_comment = Comment(content=comment_content, article_url='/voda')  # Note the article_url field.
+        db.session.add(new_comment)
+        db.session.commit()
+        return redirect(request.url)
+    comments = Comment.query.filter_by(article_url='/voda').order_by(Comment.date_posted.desc()).all()
+    return render_template('voda.html', comments=comments)
+
+@app.route('/earthquake', methods=['GET', 'POST'])
 def earthquake():
-    return render_template('earthquake.html')
-@app.route('/akim')
+    if request.method == 'POST':
+        comment_content = request.form.get('comment-input')
+        new_comment = Comment(content=comment_content, article_url='/earthquake')  # Note the article_url field.
+        db.session.add(new_comment)
+        db.session.commit()
+        return redirect(request.url)
+    comments = Comment.query.filter_by(article_url='/earthquake').order_by(Comment.date_posted.desc()).all()
+    return render_template('earthquake.html', comments=comments)
+
+@app.route('/akim', methods=['GET', 'POST'])
 def akim():
-    return render_template('akim.html')
-@app.route('/bishimbaev')
+    if request.method == 'POST':
+        comment_content = request.form.get('comment-input')
+        new_comment = Comment(content=comment_content, article_url='/akim')  # Note the article_url field.
+        db.session.add(new_comment)
+        db.session.commit()
+        return redirect(request.url)
+    comments = Comment.query.filter_by(article_url='/akim').order_by(Comment.date_posted.desc()).all()
+    return render_template('akim.html', comments=comments)
+
+@app.route('/bishimbaev', methods=['GET', 'POST'])
 def bishimbaev():
-    return render_template('bishimbaev.html')
+    if request.method == 'POST':
+        comment_content = request.form.get('comment-input')
+        new_comment = Comment(content=comment_content, article_url='/bishimbaev')  # Note the article_url field.
+        db.session.add(new_comment)
+        db.session.commit()
+        return redirect(request.url)
+    comments = Comment.query.filter_by(article_url='/bishimbaev').order_by(Comment.date_posted.desc()).all()
+    return render_template('bishimbaev.html', comments=comments)
+
+@app.route('/grad', methods=['GET', 'POST'])
+def grad():
+    if request.method == 'POST':
+        comment_content = request.form.get('comment-input')
+        new_comment = Comment(content=comment_content, article_url='/grad')  # Note the article_url field.
+        db.session.add(new_comment)
+        db.session.commit()
+        return redirect(request.url)
+    comments = Comment.query.filter_by(article_url='/grad').order_by(Comment.date_posted.desc()).all()
+
+    return render_template('grad.html' , comments=comments)
 
 @app.route('/search', methods=['POST'])
 def search():

@@ -37,13 +37,22 @@
 
         
             <!-- Comment Section -->
-            <div id="comment-section" style="margin-top: 3rem;">
-                <form id="comment-form">
-                    <label for="comment-input">Оставьте ваш комментарий:</label><br>
-                    <input type="text" id="comment-input" name="comment-input" style="width: 100%; margin-top: 0.5rem;"><br>
-                    <button type="submit" style="margin-top: 0.5rem;">Отправить</button>
-                </form>
+            <h2>Comments</h2>
+            <div id="comments">
+                {% for comment in comments %}
+                <div class="comment">
+                    <p>{{ comment.content }}</p>
+                    <small>{{ comment.date_posted.strftime('%Y-%m-%d') }}</small>
+                </div>
+                {% endfor %}
             </div>
+            
+            <!-- Comment form -->
+            <form method="POST">
+                <label for="comment-input">Leave a comment:</label><br>
+                <textarea id="comment-input" name="comment-input"></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
         </div>
     </div>
 </body>

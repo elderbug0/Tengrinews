@@ -91,7 +91,7 @@ header {
 #row2 {
     background-color: white;
     width: 75rem;
-    height: 140rem;
+    height: 100%;
     margin: 0 auto; 
     border-radius: 8px;
 }#date2{

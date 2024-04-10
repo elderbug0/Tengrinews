@@ -1,6 +1,6 @@
 body {
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    margin: 0; 
+    padding: 0; 
     background-color: #f1f2f1;
     overflow-x: hidden;
 }
@@ -24,19 +24,19 @@ header {
 #logo {
     margin-top: 0.8rem;
     margin-left: 4rem;
-    width: 13rem; /* Adjust the width of the logo */
-    height: auto; /* Maintain aspect ratio */
+    width: 13rem; 
+    height: auto; 
 }
 #sub{
     background-color: #32a801;
     margin-top: 0.9rem;
     padding: 0.7rem;
     justify-content: center;
-    cursor: default; /* Set default cursor */
-    text-align: center; /* Center align the text */
-    color: white; /* Set text color to white */
-    font-family: 'Inter', sans-serif; /* Specify Inter font family */
-    font-weight: 600; /* Set font weight to semi-bold (600) */
+    cursor: default; 
+    text-align: center; 
+    color: white; 
+    font-family: 'Inter', sans-serif; 
+    font-weight: 600; 
 }
 #date{
     color: grey;
@@ -100,16 +100,16 @@ header {
     padding-top: 2rem;
 }
 #tag{
-    float: left; /* Position list items horizontally */
-    margin-right: 2px; /* Space between items */
-    padding: 5px 10px; /* Padding inside the boxes */
-    background-color: #e6ffe7; /* Green background */
-    color: black; /* White text color */
+    float: left; 
+    margin-right: 2px; 
+    padding: 5px 10px; 
+    background-color: #e6ffe7; 
+    color: black; 
     text-align: center;
-    border-radius: 5px; /* Rounded corners */
-    font-family: 'Inter', sans-serif; /* Font from your style */
-    font-size: 0.9rem; /* Adjust font size as needed */
-    font-weight: 400; /* Font weight as needed */
+    border-radius: 5px; 
+    font-family: 'Inter', sans-serif; 
+    font-size: 0.9rem; 
+    font-weight: 400; 
 }
 #searchForm{
     margin-left: 45rem;
@@ -117,9 +117,9 @@ header {
 
 }
 #searchQuery {
-    padding: 0.5rem; /* Add some padding to the input */
-    border: 1px solid #ccc; /* Add a border */
-    border-radius: 5px; /* Add some border radius for rounded corners */
+    padding: 0.5rem; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
     width: 25rem;
 }
 #searchSuggestions {

@@ -1,6 +1,6 @@
 body {
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    margin: 0; 
+    padding: 0; 
     background-color: #f1f2f1;
     overflow-x: hidden;
 }
@@ -26,19 +26,19 @@ header {
 #logo {
     margin-top: 0.8rem;
     margin-left: 4rem;
-    width: 13rem; /* Adjust the width of the logo */
-    height: auto; /* Maintain aspect ratio */
+    width: 13rem; 
+    height: auto;
 }
 #sub{
     background-color: #32a801;
     margin-top: 1.2rem;
     padding: 0.7rem;
     justify-content: center;
-    cursor: default; /* Set default cursor */
-    text-align: center; /* Center align the text */
-    color: white; /* Set text color to white */
-    font-family: 'Inter', sans-serif; /* Specify Inter font family */
-    font-weight: 600; /* Set font weight to semi-bold (600) */
+    cursor: default; 
+    text-align: center; 
+    color: white; 
+    font-family: 'Inter', sans-serif;
+    font-weight: 600; 
 }
 #eyes{
     margin-top: 1.8rem;
@@ -57,19 +57,19 @@ header {
     margin-top: -8.6rem;
     margin-left: 4rem;
     color: white;
-    font-size: 2rem; /* Adjust based on preference */
-    font-family: 'Inter', sans-serif; /* Specify Inter font family */
+    font-size: 2rem; 
+    font-family: 'Inter', sans-serif; 
     font-weight: 700;
 }
 .news-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Creates three columns */
-    grid-template-rows: repeat(2, 1fr); /* Creates two rows */
-    gap: 0.5rem; /* Adjust the gap between the items */
-    padding: 2rem; /* Padding around the grid */
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, 1fr); 
+    gap: 0.5rem; 
+    padding: 2rem;
     height: 37rem;
     width: 55rem;
-     /* Add margin at the bottom */
+     
 
 }
 
@@ -77,7 +77,7 @@ header {
   
   .news-item img {
     height: auto;
-    width: 16rem; /* Maximum width of the image is 100% of its container */
+    width: 16rem; 
     border-radius: 5px;
     margin-bottom: 1rem;
   }
@@ -98,9 +98,9 @@ header {
 
 }
 #searchQuery {
-    padding: 0.5rem; /* Add some padding to the input */
-    border: 1px solid #ccc; /* Add a border */
-    border-radius: 5px; /* Add some border radius for rounded corners */
+    padding: 0.5rem; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
     width: 25rem;
 }
 #searchSuggestions {
@@ -126,34 +126,34 @@ header {
     margin-top: 1rem;
 }
 #scrolable::-webkit-scrollbar {
-    width: 5px; /* Makes the scrollbar thinner */
+    width: 5px; 
 }
 
 #scrolable::-webkit-scrollbar-track {
-    background: #f1f2f1; /* The track (background) of the scrollbar */
+    background: #f1f2f1; 
 }
 
 #scrolable::-webkit-scrollbar-thumb {
-    background-color: #32a801; /* The actual scrollbar handle */
-    border-radius: 20px; /* Optional: adds rounded corners to the scrollbar handle */
+    background-color: #32a801; 
+    border-radius: 20px; 
 }
 #filterChoice {
-    width: 100%; /* Makes the dropdown fill the container */
-    padding: 8px 12px; /* Adds some padding inside the dropdown for better readability */
-    border: 1px solid #ccc; /* A light grey border */
-    border-radius: 5px; /* Rounded corners */
-    background-color: white; /* Background color */
-    font-family: 'Inter', sans-serif; /* Consistent font style */
-    font-size: 1rem; /* Adjust the font size as needed */
-    color: #333; /* Font color */
-    cursor: pointer; /* Changes the cursor to indicate it's clickable */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow to make it 'pop' a bit */
-    outline: none; /* Removes the default focus outline to set a custom one */
+    width: 100%; 
+    padding: 8px 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    background-color: white; 
+    font-family: 'Inter', sans-serif; 
+    font-size: 1rem; 
+    color: #333; 
+    cursor: pointer; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    outline: none; 
 }
 
 #filterChoice:focus {
-    border-color: #4CAF50; /* Changes the border color to green when focused */
-    box-shadow: 0 0 0 2px rgba(76,175,80,0.5); /* Adds a glow effect when focused */
+    border-color: #4CAF50; 
+    box-shadow: 0 0 0 2px rgba(76,175,80,0.5); 
 }
 #newsContainer{
     font-family: 'Inter', sans-serif;
@@ -182,12 +182,12 @@ header {
     margin-top: 1rem;
     padding-bottom: 2rem;
 }
-.news-page { display: none; } /* Initially hide all pages */
+.news-page { display: none; } 
 #news-item-row { margin-bottom: 20px;  }
 
 #photo{
     height: auto;
-    width: 20rem; /* Maximum width of the image is 100% of its container */
+    width: 20rem; 
     margin-top: -2rem;
     border-radius: 5px;
     cursor: pointer;

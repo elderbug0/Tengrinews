@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tengrinews</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/eye.css')}}">
+</head>
+<body>
+    <header></header>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <div id="main-cont">
+        <img src="{{url_for('static', filename='photos/logo (2).png')}}"  alt="Logo" id="logo">
+        <form id="searchForm">
+            <input type="text" id="searchQuery" placeholder="Search news..." autocomplete="off">
+            <div id="searchSuggestions" style="position: absolute; background: white; border: 1px solid #ddd;"></div>
+        </form>
+        <div id="sub">Подписывайтесь на канал Tengrinews.kz в WhatsApp </div>
+        <p id="date">11 апреля 2024 13:19</p>
+        <h1 id="h1">Морозы до 13 градусов придут в Казахстан</h1>
+        <hr style="width: 70rem;">
+        <img src="{{url_for('static', filename='photos/photo_468433.png.png')}}" id="human">
+        <div style="width: 55rem; margin-left: 2rem; margin-top: 2rem; font-size: large; font-family: 'Inter', sans-serif; font-weight: 600;">
+            Синоптики сделали прогноз о том, какой будет погода в Казахстане 11, 12 и 13 апреля, передает корреспондент Tengrinews.kz.
+        </div>
+        <hr style="width: 70rem; margin-top: 2rem;">
+        <div id="main-text">
+            <div style="margin-top: 2rem;">Согласно прогнозу, большая часть территории Казахстана будет находиться под влиянием атмосферных фронтальных разделов, в связи с чем ночью ожидаются осадки (дождь, снег), днем дождь, 11-12 апреля на востоке и юго-востоке страны прогнозируются сильные осадки (дождь, снег). По республике в ночные и утренние часы прогнозируются туманы, днем на западе, в южных регионах ожидаются грозы, в центре, на востоке и юго-востоке - порывистый ветер.</div>
+
+            <div class="info-box" style="margin-top: 2rem;">
+                <p>"На большей части территории страны значительных колебаний в температурном фоне не прогнозируется. Лишь в северных и восточных регионах страны 12-13 апреля в ночные часы ожидается понижение температуры воздуха до 1-13 мороза", - говорится в сообщении.</p>
+            </div>
+
+
+
+            <p id="tag">Погода</p>
+            <p id="tag">Прогноз погоды</p>
+            <p id="tag">Мороз</p>
+        
+            <!-- Comment Section -->
+            <h2>Comments</h2>
+            <div id="comments">
+                {% for comment in comments %}
+                <div class="comment">
+                    <p>{{ comment.content }}</p>
+                    <small>{{ comment.date_posted.strftime('%Y-%m-%d') }}</small>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <!-- Comment form -->
+            <form method="POST">
+                <label for="comment-input">Комментарий:</label><br>
+                <textarea id="comment-input" name="comment-input"></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

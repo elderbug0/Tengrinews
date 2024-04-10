@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     var subDiv = document.getElementById('sub');
     var logo = document.getElementById('logo');
-    var newsItems = document.querySelectorAll('.news-item'); // Select all news items
+    var newsItems = document.querySelectorAll('.news-item'); 
     const searchQuery = document.getElementById('searchQuery');
     const suggestionsBox = document.getElementById('searchSuggestions');
     const filterChoice = document.getElementById('filterChoice');
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const img = document.createElement('img');
                 img.src = item.image;
                 img.alt = 'News Image';
-                img.style.width = '10rem';  // Set the image size
+                img.style.width = '10rem';  
                 img.style.height = '6rem';
                 img.style.marginRight = '10px';
 
@@ -75,21 +75,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     document.body.addEventListener('click', () => {
-        suggestionsBox.innerHTML = ''; // Clear suggestions when clicking outside
+        suggestionsBox.innerHTML = ''; 
     }, true);
 
 
-
-
-    // New: Iterate over each news item to add cursor style and click event
     newsItems.forEach(function(item) {
-        setCursor(item); // Apply cursor style on hover
-        // Use the data-route attribute for the URL in the click event
+        setCursor(item); 
         var route = item.getAttribute('data-route');
         setClickEvent(item, route);
     });
 
-    // Function to fetch and update news list based on the selected filter
+
     function fetchAndUpdateNews() {
         const choice = filterChoice.value;
         
@@ -107,12 +103,12 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => console.error('Error:', error));
     }
 
-    // Update news list when the filter choice changes
+
     filterChoice.addEventListener('change', fetchAndUpdateNews);
 
     function updateNewsList(newsData) {
         const newsContainer = document.getElementById('newsContainer');
-        newsContainer.innerHTML = ''; // Clear current news
+        newsContainer.innerHTML = ''; 
 
         newsData.forEach(newsItem => {
             const newsElement = document.createElement('div');
@@ -126,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
             newsContainer.appendChild(newsElement);
             newsElement.setAttribute('data-route', newsItem.url);
 
-            // Add click event listener to redirect based on data-route
+
             newsElement.addEventListener('click', function() {
                 const route = this.getAttribute('data-route');
                 window.location.href = route;
@@ -137,21 +133,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Automatically fetch and display the latest news on page load
     fetchAndUpdateNews();
 
 
 
-    const totalPages = 3; // Total number of pages
+    const totalPages = 3; 
     let currentPage = 1;
 
     function showPage(pageNumber) {
-        // Hide all pages
+
         const pages = document.querySelectorAll('.news-page');
         pages.forEach(page => {
             page.style.display = 'none';
         });
-        // Show the current page
+       
         const currentPageDiv = document.getElementById('page' + pageNumber);
         if (currentPageDiv){
             currentPageDiv.style.display ='flex'
@@ -160,12 +155,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function setupPaginationControls() {
         const paginationControls = document.getElementById('paginationControls');
-        paginationControls.innerHTML = ''; // Clear existing controls
+        paginationControls.innerHTML = '';
 
-        // Previous button
         const prevButton = document.createElement('button');
         prevButton.textContent = 'Previous';
-        prevButton.disabled = currentPage === 1; // Disable if on the first page
+        prevButton.disabled = currentPage === 1;
         prevButton.addEventListener('click', function() {
             if (currentPage > 1) {
                 currentPage--;
@@ -174,11 +168,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         paginationControls.appendChild(prevButton);
 
-        // Page number buttons
+
         for (let i = 1; i <= totalPages; i++) {
             const pageButton = document.createElement('button');
             pageButton.textContent = i;
-            pageButton.disabled = i === currentPage; // Disable if it's the current page
+            pageButton.disabled = i === currentPage; 
             pageButton.addEventListener('click', function() {
                 currentPage = i;
                 updatePagination();
@@ -186,10 +180,10 @@ document.addEventListener('DOMContentLoaded', function() {
             paginationControls.appendChild(pageButton);
         }
 
-        // Next button
+
         const nextButton = document.createElement('button');
         nextButton.textContent = 'Next';
-        nextButton.disabled = currentPage === totalPages; // Disable if on the last page
+        nextButton.disabled = currentPage === totalPages; 
         nextButton.addEventListener('click', function() {
             if (currentPage < totalPages) {
                 currentPage++;
@@ -204,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function() {
         setupPaginationControls();
     }
 
-    // Initialize
+    
     updatePagination();
 
 });

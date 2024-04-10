@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tengrinews</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/eye.css')}}">
+</head>
+<body>
+    <header></header>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <div id="main-cont">
+        <img src="{{url_for('static', filename='photos/logo (2).png')}}"  alt="Logo" id="logo">
+        <form id="searchForm">
+            <input type="text" id="searchQuery" placeholder="Search news..." autocomplete="off">
+            <div id="searchSuggestions" style="position: absolute; background: white; border: 1px solid #ddd;"></div>
+        </form>
+        <div id="sub">Подписывайтесь на канал Tengrinews.kz в WhatsApp </div>
+        <p id="date">25 марта 2024 13:19</p>
+        <h1 id="h1">Антикор нашел 129 миллионов тенге дома у налоговика из Астаны</h1>
+        <hr style="width: 70rem;">
+        <img src="{{url_for('static', filename='photos/photo_468414.jpeg (1).png')}}" id="human">
+        <div style="width: 55rem; margin-left: 2rem; margin-top: 2rem; font-size: large; font-family: 'Inter', sans-serif; font-weight: 600;">
+            В Астане по подозрению в совершении особо тяжкого коррупционного преступления задержан руководитель отдела аудита НДС управления по администрированию косвенных налогов столичного департамента госдоходов, передает корреспондент Tengrinews.kz.
+        </div>
+        <hr style="width: 70rem; margin-top: 2rem;">
+        <div id="main-text">
+            <div style="margin-top: 2rem;">Как сообщил официальный представитель Антикора Данияр Бигайдаров, в ходе обыска по месту жительства подозреваемого обнаружены почти 130 миллионов тенге, законность происхождения которых устанавливается.
+
+            </div>
+
+            <div class="info-box" style="margin-top: 2rem;">
+                <p>"Он получил взятку в сумме 3,6 миллиона тенге от субъекта предпринимательства за принятие положительного решения по возврату НДС в сумме 36 миллионов тенге. В ходе обыска по месту жительства изъято 129,4 миллиона тенге. Законность и обоснованность их происхождения проверяется. С санкции суда подозреваемый заключен под стражу сроком на 2 месяца. Расследование продолжается", - сообщил Бигайдаров.</p>
+            </div>
+
+
+
+            <p id="tag">Антикоррупционная служба</p>
+            <p id="tag">Налоговый комитет</p>
+        
+            <!-- Comment Section -->
+            <h2>Comments</h2>
+            <div id="comments">
+                {% for comment in comments %}
+                <div class="comment">
+                    <p>{{ comment.content }}</p>
+                    <small>{{ comment.date_posted.strftime('%Y-%m-%d') }}</small>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <!-- Comment form -->
+            <form method="POST">
+                <label for="comment-input">Комментарий:</label><br>
+                <textarea id="comment-input" name="comment-input"></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

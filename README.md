@@ -3,6 +3,8 @@
 ## Overview
 This News Portal is a dynamic web application developed using Flask, a Python web framework, and integrates HTML, CSS, and JavaScript for the frontend. It offers users the ability to search for news articles by keywords and filter results by the latest and earlier publications. The portal features a collection of 15 different news articles, ensuring a wide variety of content for users to explore.
 
+You can visit this website on: https://tengrinews-production.up.railway.app/
+
 ## Features
 - **Keyword Search**: Users can search for news articles using specific keywords, making it easy to find relevant content.
 - **Filtering**: Articles can be filtered by their publication date, allowing users to browse through the latest news or explore earlier ones.
@@ -13,7 +15,7 @@ This News Portal is a dynamic web application developed using Flask, a Python we
 
 ### Backend
 - **Framework**: Flask (Python)
-- **Main File**: `main.py`
+- **Main File**: `app.py`
 
 ### Frontend
 - HTML
@@ -30,12 +32,16 @@ One of the most challenging aspects of this project was integrating a database u
     pip install -r requirements.txt
     
 3. Run the Flask application:
-    main.py
+    app.py
     
 
 
 ### Requirements
 For a complete list of required Python libraries, refer to the `requirements.txt` file.
+
+
+
+
 
 
 
@@ -53,7 +59,7 @@ For a complete list of required Python libraries, refer to the `requirements.txt
 
 ### Backend
 - **Фреймворк**: Flask (Python)
-- **Главный файл**: `main.py`
+- **Главный файл**: `app.py`
 ### Фронтенд
 - HTML
 - CSS
@@ -67,7 +73,7 @@ For a complete list of required Python libraries, refer to the `requirements.txt
     pip install -r requirements.txt
     
 3. Запустите приложение Flask:
-    main.py
+    app.py
     
 
 ### Требования

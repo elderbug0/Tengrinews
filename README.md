@@ -73,4 +73,3 @@ For a complete list of required Python libraries, refer to the `requirements.txt
 ### Требования
 Полный список необходимых библиотек Python приведен в файле `requirements.txt`.
 
-Переведено с помощью DeepL.com (бесплатная версия)

@@ -343,4 +343,4 @@ def filter_news():
     return jsonify(filtered_news)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=5000)

@@ -5,7 +5,7 @@ My email: beibarys0809@mail.ru
 
 This News Portal is a dynamic web application developed using Flask, a Python web framework, and integrates HTML, CSS, and JavaScript for the frontend. It offers users the ability to search for news articles by keywords and filter results by the latest and earlier publications. The portal features a collection of 15 different news articles, ensuring a wide variety of content for users to explore.
 
-You can visit this website on: https://tengrinews-production.up.railway.app/    Подписка на railway закончилась. Прошу написать если нужно будет показать (продлю подписку)
+You can visit this website on: https://tengrinews-production.up.railway.app/    **Подписка на railway закончилась. Прошу написать если нужно будет показать (продлю подписку)**
 
 ## Features
 - **Keyword Search**: Users can search for news articles using specific keywords, making it easy to find relevant content.

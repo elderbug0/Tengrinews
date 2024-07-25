@@ -1,7 +1,7 @@
 # Tengrinews
 
 ## Overview
-My email: beibarys0809@mail.ru
+
 
 This News Portal is a dynamic web application developed using Flask, a Python web framework, and integrates HTML, CSS, and JavaScript for the frontend. It offers users the ability to search for news articles by keywords and filter results by the latest and earlier publications. The portal features a collection of 15 different news articles, ensuring a wide variety of content for users to explore.
 
